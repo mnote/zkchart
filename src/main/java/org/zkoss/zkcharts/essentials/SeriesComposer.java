@@ -35,12 +35,12 @@ public class SeriesComposer extends SelectorComposer<Component> {
 		Series series0 = chart.getSeries(0);
 		series0.setData(new Point("apples", 5), new Point("pears", 9), new Point("oragnes", 4), new Point("bannas", 8), new Point("grapes", 10));
 		series0.setType("area");
-		series0.setName("John");
+		series0.setName("John" + chart.getRoot().getDesktop().getExecution().getParameter("x"));
 		
 		Series series1 = chart.getSeries(1);
 		series1.setData(new Point("apples", 2),  new Point("pears", 1),new Point("oragnes", 3), new Point("bannas", 5), new Point("grapes", 9));
 		series1.setType("column");
-		series1.setName("Peter");
+		series1.setName("Peter" + this.getPage().getAttributes());
 	}
 
 	@Listen("onClick = #clear")
