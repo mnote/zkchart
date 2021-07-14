@@ -14,7 +14,8 @@ public class SeriesComposer extends SelectorComposer<Component> {
     @Wire
     Charts chart;
     
-    public void doAfterCompose(Component comp) throws Exception {
+    @Override
+	public void doAfterCompose(Component comp) throws Exception {
         super.doAfterCompose(comp);
         initData();
 		addPlotLine();
